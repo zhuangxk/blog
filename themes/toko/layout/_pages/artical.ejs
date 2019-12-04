@@ -1,0 +1,15 @@
+<%- partial('_partial/head') %>
+<body>
+    <%- partial('_partial/header',{active:'posts'}) %>
+    <main class="container posts">
+        <ul>
+            <% page.posts.each(function(post, i){ %>
+            <li> <a href="<%- post.path %>"><%- post.title %></a>
+                <span class="post-item-date"><%- date(post.date,'M月D日') %></span>
+            </li>
+            <% }) %>
+        </ul>
+
+    </main>
+    <%- partial('_partial/footer') %>
+</body>
