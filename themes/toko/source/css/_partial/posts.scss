@@ -1,0 +1,22 @@
+.posts{
+  @extend .container;
+  margin-top: 100px;
+  min-height: 70vh;
+  ul>li{
+    cursor: pointer;
+    padding: 8px 0;
+    border-bottom: 1px dashed $dashed-color;
+    &:hover{
+      .post-item-date, a{
+        color: #f8f8f2;
+      }
+    }
+    a{
+      text-decoration-line: none;
+      color: $main-color;
+    }
+    .post-item-date{
+      float: right;
+    }
+  }
+}
