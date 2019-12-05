@@ -8,7 +8,7 @@
     border-bottom: 1px dashed $dashed-color;
     &:hover{
       .post-item-date, a{
-        color: #f8f8f2;
+        color: $hover-color;
       }
     }
     a{

@@ -1,10 +1,11 @@
 <header class="header">
   <nav>
     <ul>
-      <li class="<%- active=='home'?'active':'' %>"><a href="">TOKO</a></li>
-      <li class="<%- active=='posts'?'active':'' %>"><a href="">文章</a></li>
-      <li class="<%- active=='tag'?'active':'' %>"><a href="">标签</a></li>
-      <li class="<%- active=='about'?'active':'' %>"><a href="">关于</a></li>
+      <li class="<%- path=='index.html'?'active':'' %>"><a href="<%-config.root%>">TOKO</a></li>
+      <li class="<%- path=='posts/index.html'?'active':'' %>"><a href="<%-config.root+'/posts'%>">文章</a></li>
+      <li class="<%- path=='tag/index.html'?'active':'' %>"><a href="<%-config.root+'/tags' %>">标签</a></li>
+      <li class="<%- path=='about/index.html'?'active':'' %>"><a href="<%-config.root+'/about'%>">关于</a></li>
     </ul>
   </nav>
+  <% console.log(path)%>
 </header>

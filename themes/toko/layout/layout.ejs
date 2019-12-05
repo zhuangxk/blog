@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- partial('_partial/head') %> 
 <body>
- <%- body %>
- <% console.log(page.path) %>
+  <% if (page.path==='index.html') {%>
+    <%- body %>
+  <% }else{%>
+    <%- partial('_partial/header') %> 
+    <%- body %>
+    <%- partial('_partial/footer') %> 
+  <% }%>
+  
+
 </body>
 </html>
