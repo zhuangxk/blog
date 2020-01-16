@@ -1,6 +1,5 @@
-#home{
-  height: 100vh;
-  width: 100vw;
+.home{
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,8 +8,9 @@
     font-size: 2em;
   }
   a {
-    display: inline-block;
+       display: inline-block;
       font-size: 1.2em;
+      line-height: 2em;
       color: #6272a4;
       text-decoration-line: none;
       &:hover{

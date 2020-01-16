@@ -1,6 +1,18 @@
 .article-title{
   font-size: 3em;
   font-weight: bolder;
+  margin-top:56px;
+}
+.article-info {
+  font-size: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $dashed-color;
+  .article-tag-item{
+    margin-left: 24px;
+    // background: $main-color;
+    color: $header-color;
+    padding: 2px 4px;
+  }
 }
 .article-entry{
   h1{

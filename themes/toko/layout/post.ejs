@@ -1,5 +1,17 @@
 <article class="container" >
   <div class="article-title"><%- page.title %></div>
+  <div class="article-info"> 
+     
+    发布：<%- date(page.date,'Y年M月D日') %> &nbsp;&nbsp;&nbsp;&nbsp;
+    更新：<%- date(page.updated,'Y年M月D日') %> 
+    <% page.tags.data.forEach(function(item){ %>
+      <span class="article-tag-item">
+        # <%- item.name %>
+      </span>
+    <%}) %>  
+    
+   
+  </div>
   <div class="article-entry">
     <%- page.content %>
   </div>

@@ -2,7 +2,7 @@
 @import './variables';
 
 html,body{
-  background-color:#282a36;
+  background-color: $background-color;
   line-height: 1.6;
   letter-spacing: .06em;
   scroll-behavior: smooth;
@@ -45,3 +45,5 @@ html,body{
 @import './_partial/article.scss';
 @import './_partial/code.scss';
 @import './_partial/home.scss';
+@import './_partial/tag.scss';
+@import './_partial/about.scss';

@@ -8,6 +8,10 @@ hexo.extend.generator.register('test', function (locals) {
         path: 'about/index.html',
         data: {},
         layout: ['about', 'index'] 
+    },{
+        path: 'tags/index.html',
+        data: {},
+        layout: ['tags', 'index'] 
     }];
 
 });
