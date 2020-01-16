@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='http://www.youziku.com/webfont/CSS/7b505be3a01c76e5ba846f1a39482ca5' rel='stylesheet' type='text/css'/>
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  <title>toko的blog</title>
+<meta name="generator" content="Hexo 4.2.0"></head> 
+<body>
+  
+    <header class="header">
+  <nav>
+    <ul>
+      <li class=""><a href="/blog/">TOKO</a></li>
+      <li class=""><a href="/blog//posts">文章</a></li>
+      <li class=""><a href="/blog//tags">标签</a></li>
+      <li class=""><a href="/blog//about">关于</a></li>
+    </ul>
+  </nav>
+  
+</header>
+ 
+    <article class="container" >
+  <div class="article-title">hexo 问题汇总</div>
+  <div class="article-info"> 
+     
+    发布：2020年1月15日 &nbsp;&nbsp;&nbsp;&nbsp;
+    更新：2020年1月16日 
+    
+      <span class="article-tag-item">
+        # hexo
+      </span>
+      
+    
+   
+  </div>
+  <div class="article-entry">
+    <p>记录hexo 遇到的一些问题</p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>创建文章<br>Layout 取值 post、page、draft</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>Front-matter 是文件最上方以 - - - 分隔的区域，用于指定个别文件的变量</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">时间</span> <span class="comment">#不填写好像存储到了db.json中</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">更新时间</span> <span class="comment">#同上</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">分类1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">[子分类1,</span> <span class="string">子分类2]</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment">#是否开启评论</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="config-yml-配置"><a href="#config-yml-配置" class="headerlink" title="_config.yml 配置"></a>_config.yml 配置</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span> <span class="comment">#文件名命名</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+  </div>
+</article >
+    <footer class="footer">
+  @toko.wang 2020 
+</footer> 
+  
+  
+
+</body>
+</html>
