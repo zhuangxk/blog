@@ -361,13 +361,13 @@ html, body {
     vertical-align: middle;
     margin: 1em;
     transition: all 0.3s linear;
-    animation: logo 0.3s ease-in 1; }
+    animation: logo .3s ease-in 1; }
 
 @keyframes logo {
   0% {
-    transform: rotateY(0deg); }
+    transform: rotate(180deg) scale(0.3); }
   100% {
-    transform: rotateY(360deg); } }
+    transform: rotate(720deg) scale(1); } }
   .home .host {
     font-size: 2em; }
   .home a {
