@@ -4,8 +4,25 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  .logo{
+    height: 4em;
+    vertical-align: middle;
+    margin: 1em;
+    transition: all 0.3s linear;
+    animation: logo 0.3s ease-in 1;
+  }
+  @keyframes logo {
+    0%{
+      transform: rotateY(0deg)
+    }
+    100%{
+      transform: rotateY(360deg)
+    }
+
+  }
   .host{
     font-size: 2em;
+    
   }
   a {
        display: inline-block;
