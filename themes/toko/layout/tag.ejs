@@ -1,0 +1,13 @@
+
+<main class="container posts">
+  <div class="tag-title">
+    # <%- page.tag %>
+  </div>
+  <ul>
+      <% page.posts.each(function(post, i){ %>
+        <li> <a href="<%- config.root + post.path %>"><%- post.title %></a>
+          <span class="post-item-date"><%- date(post.date,'M月D日') %></span>
+        </li>
+      <% }) %>
+  </ul> 
+</main>

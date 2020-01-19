@@ -1,7 +1,11 @@
 <main class="container posts">
 
-      <% site.tags.data.forEach(function(doc, i){ %>  
-          <span class="tag-item">#<%- doc.name %></span>
+      <% site.tags.data.forEach(function(tag, i){ %>  
+          <span class="tag-item">#
+            <a href="<%- config.root +  tag.path %>">
+                <%- tag.name %>
+            </a>
+        </span>
       <% }) %>
       
  

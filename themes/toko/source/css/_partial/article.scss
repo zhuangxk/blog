@@ -1,6 +1,7 @@
 .article-title{
+  color: #bbb;
   font-size: 3em;
-  font-weight: bolder;
+  font-weight: bold;
   margin-top:56px;
 }
 .article-info {
@@ -8,10 +9,16 @@
   padding-bottom: 12px;
   border-bottom: 1px solid $dashed-color;
   .article-tag-item{
-    margin-left: 24px;
-    // background: $main-color;
-    color: $header-color;
-    padding: 2px 4px;
+    a{
+      margin-left: 24px;
+      text-decoration: none;
+      color: $header-color;
+      padding: 2px 4px;
+      &:hover{
+        color: $main-color;
+      }   
+    }
+
   }
 }
 .article-entry{
@@ -19,13 +26,13 @@
     font-size: 2em;
   }
   h2{
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   h3{
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
   h4{
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   h5{
     font-size: 1em;
@@ -74,6 +81,7 @@
 
   ul{
     list-style: disc;
+    margin-left: 40px;
   }
   ol{
     list-style: decimal;
@@ -89,20 +97,34 @@
 
     }
   }
-
+  p{
+    text-indent: 2em;
+  }
   // padding: 0 56px;
   p, table{
-    line-height: 1.8em;
-    margin: 1.8em 0;   
+    line-height: 1.5em;
+    margin: 1em 0;   
   }
 
   h1, h2, h3, h4, h5, h6{
-    font-weight: bold
-  }
-  h1, h2, h3, h4, h5, h6{
+    color: #bbb;
+    font-weight: bolder;
     line-height: 1.2em;
     margin: 1.2em 0;
   }
+
+  blockquote{
+    padding: 20px;
+    background-color: $dashed-color;
+    border-left: 6px solid $border-color;
+    word-break: break-word;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0 0 20px;
+  }
+
+
 
   
   
