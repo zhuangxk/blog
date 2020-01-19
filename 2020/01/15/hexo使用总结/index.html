@@ -26,14 +26,17 @@
 </header>
  
     <article class="container" >
-  <div class="article-title">hexo 问题汇总</div>
+  <div class="article-title">hexo问题汇总</div>
   <div class="article-info"> 
      
     发布：2020年1月15日 &nbsp;&nbsp;&nbsp;&nbsp;
-    更新：2020年1月17日 
+    更新：2020年1月19日 
     
       <span class="article-tag-item">
-        # hexo
+        <a href="/blog/tags/hexo/">
+          # hexo
+        </a>
+        
       </span>
       
     
@@ -46,10 +49,9 @@
 <h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>Front-matter 是文件最上方以 - - - 分隔的区域，用于指定个别文件的变量</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">时间</span> <span class="comment">#不填写好像存储到了db.json中</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">更新时间</span> <span class="comment">#同上</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">分类1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">[子分类1,</span> <span class="string">子分类2]</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment">#是否开启评论</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="config-yml-配置"><a href="#config-yml-配置" class="headerlink" title="_config.yml 配置"></a>_config.yml 配置</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span> <span class="comment">#文件名命名</span></span><br></pre></td></tr></table></figure>
+<h2 id="config-yml-配置"><a href="#config-yml-配置" class="headerlink" title="_config.yml 配置"></a>_config.yml 配置</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span> <span class="comment">#文件名命名</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span> <span class="comment"># 打开资源文件夹</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">demos/**</span> <span class="comment"># 指定文件不编译 glob语法</span></span><br></pre></td></tr></table></figure>
 
-
-
+<p> <a href="https://github.com/isaacs/node-glob" target="_blank" rel="noopener">glob规则</a></p>
 
   </div>
 </article >

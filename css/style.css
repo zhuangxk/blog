@@ -113,30 +113,34 @@ html, body {
       float: right; }
 
 .article-title {
+  color: #bbb;
   font-size: 3em;
-  font-weight: bolder;
+  font-weight: bold;
   margin-top: 56px; }
 
 .article-info {
   font-size: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid #3d424d99; }
-  .article-info .article-tag-item {
+  .article-info .article-tag-item a {
     margin-left: 24px;
+    text-decoration: none;
     color: #6272a4;
     padding: 2px 4px; }
+    .article-info .article-tag-item a:hover {
+      color: #b3b1ad; }
 
 .article-entry h1 {
   font-size: 2em; }
 
 .article-entry h2 {
-  font-size: 1.5em; }
+  font-size: 1.8em; }
 
 .article-entry h3 {
-  font-size: 1.3em; }
+  font-size: 1.4em; }
 
 .article-entry h4 {
-  font-size: 1.2em; }
+  font-size: 1.1em; }
 
 .article-entry h5 {
   font-size: 1em; }
@@ -180,7 +184,8 @@ html, body {
   margin-bottom: 0; }
 
 .article-entry ul {
-  list-style: disc; }
+  list-style: disc;
+  margin-left: 40px; }
 
 .article-entry ol {
   list-style: decimal; }
@@ -194,16 +199,28 @@ html, body {
   .article-entry a:hover {
     color: #f8f8f2; }
 
+.article-entry p {
+  text-indent: 2em; }
+
 .article-entry p, .article-entry table {
-  line-height: 1.8em;
-  margin: 1.8em 0; }
+  line-height: 1.5em;
+  margin: 1em 0; }
 
 .article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6 {
-  font-weight: bold; }
-
-.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6 {
+  color: #bbb;
+  font-weight: bolder;
   line-height: 1.2em;
   margin: 1.2em 0; }
+
+.article-entry blockquote {
+  padding: 20px;
+  background-color: #3d424d99;
+  border-left: 6px solid #bd93f9;
+  word-break: break-word;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+  margin: 0 0 20px; }
 
 .code-block, .article-entry pre, .article-entry .highlight {
   background: #21222c;
@@ -382,8 +399,14 @@ html, body {
 .tag-item {
   display: inline-block;
   padding: 2px 12px;
-  margin: 4px 12px;
   border-radius: 12px; }
+  .tag-item a {
+    color: #b3b1ad; }
+    .tag-item a:hover {
+      color: #f8f8f2; }
+
+.tag-title {
+  font-size: 2em; }
 
 .about {
   display: flex;
