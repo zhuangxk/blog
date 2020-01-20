@@ -117,7 +117,8 @@
 <li>垂直居中：创建一个IFC，用其中一个元素撑开父元素的高度，然后设置其vertical-align:middle，其他行内元素则可以在此父元素下垂直居中。</li>
 </ul>
 <h3 id="GFC-网格布局格式化上下文（GridLayout-Formatting-Contexts）"><a href="#GFC-网格布局格式化上下文（GridLayout-Formatting-Contexts）" class="headerlink" title="GFC: 网格布局格式化上下文（GridLayout Formatting Contexts）"></a>GFC: 网格布局格式化上下文（GridLayout Formatting Contexts）</h3><p>display属性值设置为为“grid”或者“inline-grid”的容器<br>可看作二维布局，比flex更为强大<br><strong>网格布局</strong></p>
-<h3 id="FFC-自适应格式化上下文（Flex-Formatting-Contexts）"><a href="#FFC-自适应格式化上下文（Flex-Formatting-Contexts）" class="headerlink" title="FFC: 自适应格式化上下文（Flex Formatting Contexts）"></a>FFC: 自适应格式化上下文（Flex Formatting Contexts）</h3><p>display属性值设置为“flex”或“inline-flex”的容器。<br><strong>弹性布局</strong><br>容器有6个属性</p>
+<h3 id="FFC-自适应格式化上下文（Flex-Formatting-Contexts）"><a href="#FFC-自适应格式化上下文（Flex-Formatting-Contexts）" class="headerlink" title="FFC: 自适应格式化上下文（Flex Formatting Contexts）"></a>FFC: 自适应格式化上下文（Flex Formatting Contexts）</h3><p>display属性值设置为“flex”或“inline-flex”的容器。<br><strong>弹性布局</strong></p>
+<p>容器有6个属性</p>
 <blockquote>
 <ul>
 <li>flex-direction ： row | row-reverse | column | column-reverse; 控制方向</li>
@@ -125,7 +126,12 @@
 <li>flex-flow ： &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</li>
 <li>justify-content : flex-start | flex-end | center | space-between | space-around; 主轴的对齐方式</li>
 <li>align-items ： flex-start | flex-end | center | baseline | stretch; 交叉轴的对齐方式</li>
-<li>align-content   : flex-start | flex-end | center | space-between | space-around | stretch;  ;多根轴线的对齐方式<br>元素有6个属性</li>
+<li>align-content   : flex-start | flex-end | center | space-between | space-around | stretch;  ;多根轴线的对齐方式</li>
+</ul>
+</blockquote>
+<p>元素有6个属性</p>
+<blockquote>
+<ul>
 <li>order : 排列顺序, 数值小者在前，默认0</li>
 <li>flex-grow: 放大比例，默认0，如子元素均为1则平分剩余空间</li>
 <li>flex-shrink： 缩小比例，默认1。如果值为0不缩小</li>
