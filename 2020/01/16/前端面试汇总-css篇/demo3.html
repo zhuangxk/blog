@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>层叠模式</title>
+  <style>
+    section{
+      background-color: gray;
+    }
+    div:nth-child(1){
+      background-color: antiquewhite;
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    div:nth-child(3){
+      background-color:aqua;
+      height: 400px;
+      width: 400px;
+    }
+    div:nth-child(2){
+      background-color: aquamarine;
+      float: left;
+      height: 600px;
+      width: 300px;
+    }
+    
+    div:nth-child(4){
+      display: inline-block;
+      width: 100px;
+      background-color:yellow;
+    }
+    div:nth-child(5){
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      height: 100px;
+      width: 100px;
+      background-color:blueviolet;
+    }
+    div:nth-child(6){
+      background-color:violet;
+      position: absolute;
+      left: 120px;
+      top: 120px;
+      height: 50px;
+      width: 50px;
+      z-index: 1;
+    }
+    div:nth-child(7){
+      background-color: coral;
+    }
+    pre{
+      position: absolute;
+      top: 0;
+      left: 600px;
+    }
+  </style>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+  <section>
+   <div>
+    2
+  </div>
+  <div>
+    4
+  </div>
+  <div>
+    3
+  </div>
+  <div>
+    5
+  </div>
+  <div>
+    6
+  </div>
+  <div>
+    7
+  </div>
+  </section>
+
+  <pre>
+      > 1. 拥有负 z-index 的子堆叠上下文元素 （负的越高越堆叠层级越低）
+      > 2. 形成堆叠上下文环境的元素的背景与边框
+      > 3. 正常流式布局，非 inline-block，无 position 定位（static除外）的子元素
+      > 4. 无 position 定位（static除外）的 float 浮动元素
+      > 5. 正常流式布局， inline-block元素，无 position 定位（static除外）的子元素（包括 display:table 和 display:inline ）
+      > 6. 拥有 z-index:0 的子堆叠上下文元素
+      > 7. 拥有正 z-index: 的子堆叠上下文元素（正的越低越堆叠层级越低）
+  </pre>
+</body>
+</html>
