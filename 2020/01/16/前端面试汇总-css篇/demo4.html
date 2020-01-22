@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>居中</title>
+  <style>
+
+    /* .box{
+      display: flex;
+      flex-flow: row wrap;
+    } */
+    .box>div{
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      margin: 10px;
+    }
+    .box>div>div{
+      height: 100px;
+      width: 100px;
+      background-color: aqua;
+    }
+    .box>div:nth-child(1){
+      position: relative;
+    }
+    .box>div:nth-child(1)>div{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -50px;
+      margin-top: -50px; 
+    }
+    .box>div:nth-child(2){
+      position: relative;
+    }
+    .box>div:nth-child(2)>div{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .box>div:nth-child(3){
+      position: relative;
+    }
+    .box>div:nth-child(3)>div{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .box>div:nth-child(4){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box>div:nth-child(5){
+      display: grid;
+    }
+    .box>div:nth-child(5)>div{
+      margin: auto;
+    }
+
+    .box>div:nth-child(6){
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .box>div:nth-child(6)>div{
+      display: inline-block;
+      /* margin: auto; */
+    }
+
+
+
+    
+
+  </style>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+  <div class="box">
+  <div>
+    <div>
+      1
+    </div>
+  </div>  
+  <div>
+    <div>
+      2
+    </div>
+  </div>  
+  <div>
+    <div>
+      3
+    </div>
+  </div>  
+  <div>
+    <div>
+      4
+    </div>
+  </div>  
+  <div>
+    <div>
+      5
+    </div>
+  </div>  
+  <div>
+    <div>
+      6
+    </div>
+  </div>  
+ 
+</div>
+</body>
+</html>

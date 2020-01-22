@@ -30,18 +30,18 @@
   <div class="article-info"> 
      
     发布：2020年1月16日 &nbsp;&nbsp;&nbsp;&nbsp;
-    更新：2020年1月20日 
+    更新：2020年1月22日 
     
       <span class="article-tag-item">
-        <a href="/blog/tags/面试/">
-          # 面试
+        <a href="/blog/tags/前端/">
+          # 前端
         </a>
         
       </span>
     
       <span class="article-tag-item">
-        <a href="/blog/tags/前端/">
-          # 前端
+        <a href="/blog/tags/面试/">
+          # 面试
         </a>
         
       </span>
@@ -167,9 +167,43 @@
 </blockquote>
 <p>查看层级顺序关系<a href="/blog/2020/01/16/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%B1%87%E6%80%BB-css%E7%AF%87/demo3.html" title="demo">demo</a></p>
 <p><strong>清楚浮动的方法</strong></p>
+<ol>
+<li>给父级也加浮动</li>
+<li>给父级加display:inline-block</li>
+<li>在浮动元素下加 元素 clear:both;</li>
+<li>父元素overflow: hidden</li>
+<li>给浮动元素的父级加{zoom:1;}</li>
+</ol>
+<h3 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h3><h3 id="定宽高"><a href="#定宽高" class="headerlink" title="定宽高"></a>定宽高</h3><p>简单 <a href="/blog/2020/01/16/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%B1%87%E6%80%BB-css%E7%AF%87/demo4.html" title="demo">demo</a></p>
 <ul>
-<li>添加伪元素或新元素 clear:both</li>
-<li>父元素定义 overflow:hidden/auto</li>
+<li>绝对定位+margin: 负一半</li>
+<li>绝对定位+transform: translate(-50%,-50%)</li>
+<li>绝对定位+left/right/top/bottom:0;margin:auto;</li>
+<li>flex布局 justify-content:center;align-item:center;</li>
+<li>grid布局 项目设置margin:auto;</li>
+<li>display: table-cell + text-align:center; vertical-align: middle + 子元素 display: inline-block;</li>
+</ul>
+<h3 id="不定宽高"><a href="#不定宽高" class="headerlink" title="不定宽高"></a>不定宽高</h3><ul>
+<li>绝对定位+transform: translate(-50%,-50%)</li>
+<li>flex布局 justify-content:center;align-item:center;</li>
+<li>display: table-cell + text-align:center; vertical-align: middle + 子元素 display: inline-block;</li>
+<li>grid布局+margin</li>
+<li>writing-mode: vertical-lr; +  text-align: center; + 子元素dispaly: inline-block;</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>内联元素水平居中</p>
+<ul>
+<li>行内元素可设置：text-align: center;</li>
+<li>flex布局设置父元素：display: flex; justify-content: center;<br>内联元素垂直居中</li>
+<li>单行文本父元素确认高度：height === line-height;</li>
+<li>多行文本父元素确认高度：disaply: table-cell; vertical-align: middle;<br>块级元素水平居中</li>
+<li>定宽: margin: 0 auto;</li>
+<li>不定宽： 参考上诉中不定宽高示例。<br>块级元素垂直居中</li>
+<li>position: absolute设置left、top、margin-left、margin-to(定高)；</li>
+<li>position: fixed设置margin: auto(定高)；</li>
+<li>display: table-cell；</li>
+<li>transform: translate(x, y)；</li>
+<li>flex(不定高，不定宽)；</li>
+<li>grid(不定高，不定宽)，兼容性相对比较差；</li>
 </ul>
 <h3 id="contain"><a href="#contain" class="headerlink" title="contain"></a>contain</h3>
   </div>
