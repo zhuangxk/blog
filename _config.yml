@@ -95,10 +95,19 @@ theme: toko
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: ''
+
 
 #server
 server: 
   port: 8888
   log: true
+
+deploy:
+  type: rsync
+  host: 192.144.212.110
+  user: root
+  root: /root/deploy/blog
+  port: 22 # Default is 22
+  delete: true # Default is true
+  verbose: true # Default is true
+  ignore_errors: false # Default is false
