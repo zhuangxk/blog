@@ -41,7 +41,8 @@
    
   </div>
   <div class="article-entry">
-    <h1 id="go语法学习"><a href="#go语法学习" class="headerlink" title="go语法学习"></a>go语法学习</h1><h2 id="hollo-world"><a href="#hollo-world" class="headerlink" title="hollo world"></a>hollo world</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    fmt.Println(<span class="string">"Hello, World!"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+    <h1 id="go语法学习"><a href="#go语法学习" class="headerlink" title="go语法学习"></a>go语法学习</h1><p><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+<h2 id="hollo-world"><a href="#hollo-world" class="headerlink" title="hollo world"></a>hollo world</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    fmt.Println(<span class="string">"Hello, World!"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
 <p>编译</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">go build hello.go</span></pre></td></tr></table></figure>
@@ -94,6 +95,59 @@
 
 </li>
 </ul>
+<h2 id="go-变量作用域"><a href="#go-变量作用域" class="headerlink" title="go 变量作用域"></a>go 变量作用域</h2><ul>
+<li>局部变量： 函数内部</li>
+<li>全局变量： 函数外</li>
+<li>形式参数： 函数的局部变量</li>
+</ul>
+<h2 id="go-数组"><a href="#go-数组" class="headerlink" title="go 数组"></a>go 数组</h2><p>声明：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> variable_name [SIZE] variable_type</span></pre></td></tr></table></figure>
+<p>初始化</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> balance = [<span class="number">5</span>]<span class="keyword">float32</span>&#123;<span class="number">1000.0</span>, <span class="number">2.0</span>, <span class="number">3.4</span>, <span class="number">7.0</span>, <span class="number">50.0</span>&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> balance = [...]<span class="keyword">float32</span>&#123;<span class="number">1000.0</span>, <span class="number">2.0</span>, <span class="number">3.4</span>, <span class="number">7.0</span>, <span class="number">50.0</span>&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">balance[<span class="number">4</span>] = <span class="number">50.0</span></span></pre></td></tr></table></figure>
+<p>多维数组</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> variable_name [SIZE1][SIZE2]...[SIZEN] variable_type</span></pre></td></tr></table></figure>
+<h2 id="go-指针"><a href="#go-指针" class="headerlink" title="go 指针"></a>go 指针</h2><p>指针使用流程：</p>
+<ul>
+<li>定义指针变量。 var var_name *var-type</li>
+<li>为指针变量赋值。 var_name = &amp;a</li>
+<li>访问指针变量中指向地址的值。 *var_name</li>
+</ul>
+<p>空指针<br>当一个指针被定义后没有分配到任何变量时，它的值为 nil。</p>
+<p>Go 支持指向指针的指针</p>
+<h2 id="go-结构体"><a href="#go-结构体" class="headerlink" title="go 结构体"></a>go 结构体</h2><p>跟java的modal一个意思<br>定义</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> struct_variable_type <span class="keyword">struct</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   member definition</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   member definition</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">   member definition</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>结构体用于用于变量的声明</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">variable_name := structure_variable_type &#123;value1, value2...valuen&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">或</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">variable_name := structure_variable_type &#123; key1: value1, key2: value2..., keyn: valuen&#125;</span></pre></td></tr></table></figure>
+
+<p>访问：  结构体.成员名”</p>
+<h2 id="go-切片"><a href="#go-切片" class="headerlink" title="go 切片"></a>go 切片</h2><p>Go 语言切片是对数组的抽象。与数组相比切片的长度是不固定的，可以追加元素，在追加时可能使切片的容量增大。</p>
+<p>切片定义[]</p>
+<ul>
+<li>var identifier []type</li>
+<li>var slice1 []type = make([]type, len)</li>
+<li>slice1 := make([]type, len)</li>
+<li>make([]T, length, capacity)</li>
+</ul>
+<p>初始化 类似python</p>
+<ul>
+<li>s :=[] int {1,2,3 } </li>
+<li>s := arr[:] </li>
+<li>s := arr[startIndex:endIndex]</li>
+<li>s := arr[startIndex:]</li>
+<li>s := arr[:endIndex] </li>
+<li>s1 := s[startIndex:endIndex] </li>
+<li>s :=make([]int,len,cap) </li>
+</ul>
+<p>函数</p>
+<ul>
+<li>make() 初始化</li>
+<li>len() 测量长度  </li>
+<li>cap() 最大容量  </li>
+<li>append() 添加  </li>
+<li>copy() 复制  </li>
+</ul>
+<p>一个切片在未初始化之前默认为 nil，长度为 0</p>
+<h2 id="go-范围（Range）"><a href="#go-范围（Range）" class="headerlink" title="go 范围（Range）"></a>go 范围（Range）</h2><p>Go 语言中 range 关键字用于 for 循环中迭代数组(array)、切片(slice)、通道(channel)或集合(map)的元素。在数组和切片中它返回元素的索引和索引对应的值，在集合中返回 key-value 对。<br>类似迭代</p>
 
   </div>
 </article >
