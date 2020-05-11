@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='http://www.youziku.com/webfont/CSS/7b505be3a01c76e5ba846f1a39482ca5' rel='stylesheet' type='text/css'/>
+  <link rel="shortcut icon" href="/blog//images/favicon.ico">
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  <title>toko的blog</title>
+<meta name="generator" content="Hexo 4.2.0"></head> 
+<body>
+  
+    <header class="header">
+  <nav>
+    <ul>
+      <li class=""><a href="/blog/">TOKO</a></li>
+      <li class=""><a href="/blog//posts">文章</a></li>
+      <li class=""><a href="/blog//tags">标签</a></li>
+      <li class=""><a href="/blog//about">关于</a></li>
+    </ul>
+  </nav>
+  
+</header>
+ 
+    <article class="container" >
+  <div class="article-title">multipass 体验</div>
+  <div class="article-info"> 
+     
+    发布：2020年5月11日 &nbsp;&nbsp;&nbsp;&nbsp;
+    更新：2020年5月11日 
+    
+      <span class="article-tag-item">
+        <a href="/blog/tags/multipass/">
+          # multipass
+        </a>
+        
+      </span>
+      
+    
+   
+  </div>
+  <div class="article-entry">
+    <h2 id="小记"><a href="#小记" class="headerlink" title="小记"></a>小记</h2><p>在windows 环境开发 受到很多限制。 下面陈列一下我折腾过的案例~~</p>
+<ol>
+<li>win环境，主要是在学校和工作初期</li>
+<li>win+linux 双系统，也是在学校期间开始折腾的主要是win7 + ubuntu</li>
+<li>纯linux环境，当时安装的Linux Mint 几乎作为主要开发环境用了近1年，后来因为要开发windows 又换回去了</li>
+<li>wsl1, wsl1是从他诞生不久就开始使用了 一直用到现在，整体体验非常好。但是有两个缺点，1是文件IO性能差，2就是不能用docker<br> 所以我一直在需求替代方案。以下是其他折腾记录~~</li>
+<li>wsl2, 据说wsl2性能出众能运行docker，因为不知道需要加入win10的预览体验计划，折腾了好久。。成功是成功了但是没等我开始用呢，我发现最新的win10跑不起来SSR了，这个怎么能忍受。。直接还原了。。</li>
+<li>WMware, 虚拟机是个好东西，什么都可以虚拟，想想现在电脑性能不错 于是直接虚拟了一台macOS 10.15 也是一天的功夫。。体验了下有点卡。可能主要是不支持虚拟机的3d加速，独立显卡，加上每次用还要开机，也是受不了。。不过有台mac确实挺爽 </li>
+<li>黑苹果，于是我想着虚拟机不好使干脆上黑苹果，就开始了黑苹果的研究。。。这次我主动放弃了，因为了解到黑苹果驱动问题要折腾好久。。想想用时间长了肯定会换回来了。。不是长久之计</li>
+<li>EXSI, 最近在公司找了一台主体装了一台虚拟服务，如果在上边装个linux专门开发用？想想万一让同事给我删除了，还是算了吧~</li>
+<li>winDocker, 装过一次 windows 上很卡，不知道现在好了么，觉得docker就应该跑在linux才对~</li>
+<li>听说ubuntu20 出来了，想体验一番。在官网发现了一个简介虚拟工具，multipass,还是热乎的。。开搞</li>
+</ol>
+<h2 id="multipass-基本了解"><a href="#multipass-基本了解" class="headerlink" title="multipass 基本了解"></a>multipass 基本了解</h2><p>multipass 支持mac,linux,windows,并且分别依赖各个平台的虚拟技术,win上依赖 hyper-V</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="列出远程镜像列表"><a href="#列出远程镜像列表" class="headerlink" title="列出远程镜像列表"></a>列出远程镜像列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multipass find</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装启动"><a href="#安装启动" class="headerlink" title="安装启动"></a>安装启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multipass launch --name ubuntu-lts</span><br></pre></td></tr></table></figure>
+
+<p>下载特别慢 ,  powershell 用本地socks代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh winhttp import proxy <span class="built_in">source</span>=ie</span><br></pre></td></tr></table></figure>
+
+<h3 id="进入ubuntu"><a href="#进入ubuntu" class="headerlink" title="进入ubuntu"></a>进入ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multipass shell focal</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>添加~/.ssh/id_rsa.pub 到 ubuntu 的 ~root/.ssh/authorized_keys中</p>
+<h2 id="配置VScode"><a href="#配置VScode" class="headerlink" title="配置VScode"></a>配置VScode</h2><p>安装 remote-ssh 扩展配置ip 远程连接</p>
+
+  </div>
+</article >
+    <footer class="footer">
+  @toko.wang 2020 
+</footer> 
+  
+  
+
+</body>
+</html>
