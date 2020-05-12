@@ -18,7 +18,7 @@ tags: multipass
 7. 黑苹果，于是我想着虚拟机不好使干脆上黑苹果，就开始了黑苹果的研究。。。这次我主动放弃了，因为了解到黑苹果驱动问题要折腾好久。。想想用时间长了肯定会换回来了。。不是长久之计
 8. EXSI, 最近在公司找了一台主体装了一台虚拟服务，如果在上边装个linux专门开发用？想想万一让同事给我删除了，还是算了吧~
 9. winDocker, 装过一次 windows 上很卡，不知道现在好了么，觉得docker就应该跑在linux才对~
-10. 听说ubuntu20 出来了，想体验一番。在官网发现了一个简介虚拟工具，multipass,还是热乎的。。开搞
+10. 本想体验ubuntu20 出来了，结果在官网发现了一个好用的虚拟工具，multipass,还是热乎的。。开搞吧！
 
 
 ## multipass 基本了解
@@ -56,6 +56,14 @@ multipass shell focal
 ## 配置VScode
 
 安装 remote-ssh 扩展配置ip 远程连接
+
+每次电脑重启后Hyper-V 会分配新的IP,修改不方便，Google 到方案 主机名.mshome.net 可行
+
+```yml
+Host multipass tokyo
+  HostName tokyo.mshome.net
+  User ubuntu
+```
 
 
 
