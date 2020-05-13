@@ -19,8 +19,8 @@ tags: multipass
 8. EXSI, 最近在公司找了一台主体装了一台虚拟服务，如果在上边装个linux专门开发用？想想万一让同事给我删除了，还是算了吧~
 9. winDocker, 装过一次 windows 上很卡，不知道现在好了么，觉得docker就应该跑在linux才对~
 10. 本想体验ubuntu20 出来了，结果在官网发现了一个好用的虚拟工具，multipass,还是热乎的。。开搞吧！
-
-
+补充 11, 发现腾讯云的cloudstudio 是用的云端vscode 体验一番特别卡。。于是自己搭建了一个。。
+研究一番纪律下最终命令 docker run --name journal_server -it -u root -p 0.0.0.0:7000:8080 -e PASSWORD='111' -v "$PWD:/home/coder/project" codercom/code-server:latest
 ## multipass 基本了解
 
 multipass 支持mac,linux,windows,并且分别依赖各个平台的虚拟技术,win上依赖 hyper-V
