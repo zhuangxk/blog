@@ -30,7 +30,7 @@
   <div class="article-info"> 
      
     发布：2020年5月11日 &nbsp;&nbsp;&nbsp;&nbsp;
-    更新：2020年5月12日 
+    更新：2020年5月13日 
     
       <span class="article-tag-item">
         <a href="/blog/tags/multipass/">
@@ -54,9 +54,9 @@
 <li>黑苹果，于是我想着虚拟机不好使干脆上黑苹果，就开始了黑苹果的研究。。。这次我主动放弃了，因为了解到黑苹果驱动问题要折腾好久。。想想用时间长了肯定会换回来了。。不是长久之计</li>
 <li>EXSI, 最近在公司找了一台主体装了一台虚拟服务，如果在上边装个linux专门开发用？想想万一让同事给我删除了，还是算了吧~</li>
 <li>winDocker, 装过一次 windows 上很卡，不知道现在好了么，觉得docker就应该跑在linux才对~</li>
-<li>本想体验ubuntu20 出来了，结果在官网发现了一个好用的虚拟工具，multipass,还是热乎的。。开搞吧！</li>
+<li>本想体验ubuntu20 出来了，结果在官网发现了一个好用的虚拟工具，multipass,还是热乎的。。开搞吧！<br>补充 11, 发现腾讯云的cloudstudio 是用的云端vscode 体验一番特别卡。。于是自己搭建了一个。。<br>研究一番纪律下最终命令 docker run –name journal_server -it -u root -p 0.0.0.0:7000:8080 -e PASSWORD=’111’ -v “$PWD:/home/coder/project” codercom/code-server:latest<h2 id="multipass-基本了解"><a href="#multipass-基本了解" class="headerlink" title="multipass 基本了解"></a>multipass 基本了解</h2></li>
 </ol>
-<h2 id="multipass-基本了解"><a href="#multipass-基本了解" class="headerlink" title="multipass 基本了解"></a>multipass 基本了解</h2><p>multipass 支持mac,linux,windows,并且分别依赖各个平台的虚拟技术,win上依赖 hyper-V</p>
+<p>multipass 支持mac,linux,windows,并且分别依赖各个平台的虚拟技术,win上依赖 hyper-V</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="列出远程镜像列表"><a href="#列出远程镜像列表" class="headerlink" title="列出远程镜像列表"></a>列出远程镜像列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multipass find</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装启动"><a href="#安装启动" class="headerlink" title="安装启动"></a>安装启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multipass launch --name ubuntu-lts</span><br></pre></td></tr></table></figure>
