@@ -12,10 +12,10 @@
     a{
       margin-left: 24px;
       text-decoration: none;
-      color: $header-color;
+      color: $link-color;
       padding: 2px 4px;
       &:hover{
-        color: $main-color;
+        color: $hover-color;
       }   
     }
 
@@ -90,8 +90,8 @@
     font-weight: bold;
   }
   a{
-    color: $main-color;
-    text-decoration-color: $hover-color;
+    color: $link-color;
+    text-decoration: none;
     &:hover{
       color: $hover-color;
 
